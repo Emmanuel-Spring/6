@@ -1,0 +1,29 @@
+package com.talentyco.entity;
+
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+import javax.persistence.*;
+import java.io.Serializable;
+
+@Data
+@Entity
+@Table(name = "orders")
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+public class Employees implements Serializable{
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer employeeNumber;
+    
+    @Column(name = "first_nane")
+    private String firstName;
+
+    @Column(name = "last_nane")
+    private String lastName;
+}
